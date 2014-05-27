@@ -1,12 +1,24 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+bin/
+.*.jar
+**/xtend-gen
+**/src-gen
+**/resources/VAADIN/widgetsets
+**/resources/VAADIN/gwt-unitCache
+**/WebContent/VAADIN/widgetsets
+**/localTarget
+**/build
+**/WebContent/WEB-INF/lib
+.DS_Store
+target
+.classpath
+.settings
+src-gen/
+xtend-gen/
+plugin.xml_gen
+.project
+/build.runtime-web.kepler.latest.log.properties
+**/log
+**/org.lunifera.runtime.web.doc/contents/
+**/org.lunifera.runtime.web.doc/website/
+**/org.lunifera.runtime.web.vaadin.components/resources/
+**/org.lunifera.runtime.web.vaadin.components/gwt-unitCache/

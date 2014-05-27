@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target includeMode="feature" name="org.lunifera.runtime.web.target.kepler" sequenceNumber="40">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipselabs.spray.feature.sdk.feature.group" version="0.5.1.201405201143"/>
+<repository location="http://jenkins.lunifera.org:8083/job/Spray/ws/releng/org.eclipselabs.spray.updatesite/target/repository/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.mwe2.language.sdk.feature.group" version="2.5.1.v201402030750"/>
+<unit id="org.eclipse.emf.mwe2.runtime.sdk.feature.group" version="2.5.1.v201402030544"/>
+<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.8.0.v20140114-1344"/>
+<unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="1.2.1.v20140221-1852"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.3.2.v20140221-1700"/>
+<unit id="org.xpect.sdk.feature.group" version="0.1.0.201401101421"/>
+<unit id="org.eclipse.gef.sdk.feature.group" version="3.9.1.201308190730"/>
+<unit id="org.eclipse.xtend.sdk.feature.group" version="2.5.4.v201404090743"/>
+<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.7.0.201306111400"/>
+<unit id="org.eclipse.jdt.feature.group" version="3.9.2.v20140221-1700"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20140117-1004"/>
+<unit id="org.eclipse.xtext.sdk.feature.group" version="2.5.4.v201404090743"/>
+<unit id="de.itemis.xtext.antlr.feature.feature.group" version="2.1.0.v201308291703"/>
+<unit id="org.eclipse.platform.feature.group" version="4.3.2.v20140221-1852"/>
+<unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="2.2.1.201402241301"/>
+<unit id="org.eclipse.sdk.feature.group" version="4.3.2.v20140221-1852"/>
+<unit id="org.eclipse.emf.ecore.xcore.sdk.feature.group" version="1.1.2.v20131212-0836"/>
+<unit id="org.eclipselabs.xtext.utils.unittesting.feature.feature.group" version="0.9.3.201204261440"/>
+<unit id="org.eclipse.equinox.p2.extras.feature.feature.group" version="1.2.0.v20140221-1852"/>
+<unit id="org.eclipse.pde.feature.group" version="3.9.1.v20140221-1700"/>
+<unit id="org.eclipse.help.feature.group" version="2.0.2.v20140221-1700"/>
+<unit id="org.eclipse.emf.eef.sdk-feature.feature.group" version="1.2.0.201301111054"/>
+<unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="1.2.0.v20140221-1852"/>
+<unit id="org.eclipse.equinox.p2.user.ui.feature.group" version="2.2.0.v20140221-1852"/>
+<unit id="org.eclipse.zest.sdk.feature.group" version="1.5.1.201308190730"/>
+<unit id="de.itemis.xtext.antlr.sdk.feature.group" version="2.1.0.v201308291703"/>
+<unit id="org.eclipse.swtbot.eclipse.feature.group" version="2.2.1.201402241301"/>
+<unit id="org.eclipse.graphiti.sdk.plus.feature.feature.group" version="0.10.2.v20140217-1225"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.9.2.v20140203-1126"/>
+<repository location="http://jenkins.lunifera.org:8083/job/Spray/ws/releng/org.eclipselabs.spray.repository/target/repository/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.lunifera.dsl.feature.dto.headless.feature.group" version="0.0.1.201405050842"/>
+<unit id="org.lunifera.dsl.feature.common.headless.source.feature.group" version="0.0.1.201405050842"/>
+<unit id="org.lunifera.dsl.feature.entities.headless.feature.group" version="0.0.1.201405050842"/>
+<unit id="org.lunifera.dsl.feature.common.headless.feature.group" version="0.0.1.201405050842"/>
+<unit id="org.lunifera.dsl.feature.dto.headless.source.feature.group" version="0.0.1.201405050842"/>
+<unit id="org.lunifera.dsl.feature.entities.headless.source.feature.group" version="0.0.1.201405050842"/>
+<repository location="http://lun.lunifera.org/downloads/p2/lunifera/luna/latest/dsl/0.0.1.20140505103905/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.persistence.sdk.feature.group" version="2.5.1.v20130913-5eaeb06"/>
+<repository location="http://download.eclipse.org/releases/kepler"/>
+</location>
+</locations>
+</target>
