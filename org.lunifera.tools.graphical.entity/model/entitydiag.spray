@@ -1,0 +1,67 @@
+/*************************************************************************************
+ *
+ * Spray diagram definition
+ * 
+ * This file contains the definition of a graphical editor using the Spray Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *
+ * See also entitydiag.properties to configure generator properties.
+ *************************************************************************************/
+// Add import statements here
+import entity.*
+import types.*
+
+diagram Entitydiag for LEntityModel style EntitydiagDefaultStyle
+
+// Add class mappings here. Refer to EClasses here. Don't forget to configure a
+// dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
+// It is required to have a genmodel for the metamodel.
+//
+// Example class mapping:
+
+
+class LTypedPackage alias Package icon "ecore/EClass.gif" {
+	shape PackageShape {
+		name into packageName
+		reference types into typesCompartment
+	}
+	behavior {
+		create into packages palette "Shapes" askFor name;
+	}
+}
+
+class LEntity icon "ecore/EClass.gif" {
+	shape EntityShape {
+		name into className
+		 reference features into attributesCompartement
+	}
+	references {
+		superType : connection ArrowConnection alias SuperClass
+	}
+	behavior {
+		create palette "Shapes";
+	}
+}
+
+class LBean icon "ecore/EClass.gif" {
+	shape BeanShape {
+		name into beanName
+//		reference features into typesCompartement
+	}
+	references {
+		superType : connection ArrowConnection alias SuperBean
+	}
+	behavior {
+		create palette "Shapes";
+	}
+}
+
+class LEntityAttribute icon "ecore/EAttribute.gif" {
+	shape EntityAttributeShape {
+		name into EntityAttributeText
+//		reference type into typeCompartement
+	} 
+	behavior {
+		create palette "Features"
+	}
+}

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Generated on Tue May 27 15:20:32 CEST 2014 by Spray Plugin.xtend
+ This file will be generated only once if it need to be regenerated, remove this file.
+ 
+-->
+<plugin>
+  
+  <!-- GRAPHITI EDITOR EXTENSION AUTOGEN START -->
+     <!-- Potentially redefine the EDITOR EXTENSION TO ALLOW FOR OUR OWN EDITOR SUBCLASS TO BE USED. 
+<extension
+      point="org.eclipse.ui.editors">
+   <editor
+       class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramEditor"
+       contributorClass="org.eclipse.graphiti.ui.editor.DiagramEditorActionBarContributor"
+       default="true"
+       extensions="diagram"
+       icon="icons/diagram.gif"
+       id="org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramEditor"
+       matchingStrategy="org.eclipse.graphiti.ui.editor.DiagramEditorFactory$DiagramEditorMatchingStrategy"
+       name="%_diagram_editor_name">
+    <contentTypeBinding
+          contentTypeId="org.eclipse.graphiti.content.diagram">
+    </contentTypeBinding>
+   </editor>
+</extension>
+-->
+     <!-- GRAPHITI EDITOR EXTENSION AUTOGEN END -->
+  
+  <extension
+       point="org.eclipse.graphiti.ui.diagramTypes">
+    <!-- DIAGRAM TYPE AUTOGEN START -->
+     <diagramType
+  description="This is the diagram type for the Entitydiag diagram type"
+  id="org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramType"
+  name="Entitydiag Graphiti Diagram Type"
+  type="Entitydiag">
+</diagramType>
+     <!-- DIAGRAM TYPE AUTOGEN END -->
+  </extension>
+  
+  <extension
+       point="org.eclipse.graphiti.ui.diagramTypeProviders">
+    <!-- DIAGRAM TYPE PROVIDER AUTOGEN START -->
+     <diagramTypeProvider
+  class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramTypeProvider"
+  description="This is my editor for the Entitydiag diagram type"
+  id="org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramTypeProvider"
+  name="Entitydiag editor">
+  <diagramType
+        id="org.lunifera.tools.graphical.entity.diagram.EntitydiagDiagramType">
+  </diagramType>
+    <imageProvider
+           id="org.lunifera.tools.graphical.entity.diagram.EntitydiagImageProvider">
+     </imageProvider>
+</diagramTypeProvider>
+     <!-- DIAGRAM TYPE PROVIDER AUTOGEN END -->
+  </extension>
+  
+  <extension
+       point="org.eclipse.graphiti.ui.imageProviders">
+    <!-- IMAGE PROVIDER AUTOGEN START -->
+     <imageProvider
+      class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.diagram.EntitydiagImageProvider"
+         id="org.lunifera.tools.graphical.entity.diagram.EntitydiagImageProvider">
+</imageProvider>
+     <!-- IMAGE PROVIDER AUTOGEN END -->
+  </extension>
+  
+  <extension
+       point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+    <propertyContributor contributorId="Myentitydiag.PropertyContributor">
+       <propertyCategory category="MyentitydiagCategory">
+       </propertyCategory>
+    </propertyContributor>
+  </extension>
+  
+  <extension
+       point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+    <propertyTabs contributorId="Myentitydiag.PropertyContributor">
+      <!-- PROPERTY TAB AUTOGEN START -->
+     <propertyTab label="Main" category="EntitydiagCategory"
+    id="Entitydiag.main.tab">
+</propertyTab>
+     <!-- PROPERTY TAB AUTOGEN END -->
+    </propertyTabs>
+  </extension>
+  
+  <!-- PROPERTY SECTIONS AUTOGEN START -->
+     <extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="Entitydiag.PropertyContributor">
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LTypedPackageNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LTypedPackageFilter"
+   id="Entitydiag.main.tab.LTypedPackage.name">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="Entitydiag.PropertyContributor">
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   id="Entitydiag.main.tab.LEntity.name">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAbstractSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.name"
+   id="Entitydiag.main.tab.LEntity.abstract">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntitySerializableSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.abstract"
+   id="Entitydiag.main.tab.LEntity.serializable">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityShortNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.serializable"
+   id="Entitydiag.main.tab.LEntity.shortName">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityCacheableSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.shortName"
+   id="Entitydiag.main.tab.LEntity.cacheable">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityHistorizedSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.cacheable"
+   id="Entitydiag.main.tab.LEntity.historized">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityTimedependentSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.historized"
+   id="Entitydiag.main.tab.LEntity.timedependent">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityTimedependentDateTypeSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.timedependent"
+   id="Entitydiag.main.tab.LEntity.timedependentDateType">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityMappedSuperclassSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityFilter"
+   afterSection="Entitydiag.main.tab.LEntity.timedependentDateType"
+   id="Entitydiag.main.tab.LEntity.mappedSuperclass">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="Entitydiag.PropertyContributor">
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LBeanNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LBeanFilter"
+   id="Entitydiag.main.tab.LBean.name">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LBeanAbstractSection"
+   filter="org.lunifera.tools.graphical.entity.property.LBeanFilter"
+   afterSection="Entitydiag.main.tab.LBean.name"
+   id="Entitydiag.main.tab.LBean.abstract">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LBeanSerializableSection"
+   filter="org.lunifera.tools.graphical.entity.property.LBeanFilter"
+   afterSection="Entitydiag.main.tab.LBean.abstract"
+   id="Entitydiag.main.tab.LBean.serializable">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LBeanShortNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LBeanFilter"
+   afterSection="Entitydiag.main.tab.LBean.serializable"
+   id="Entitydiag.main.tab.LBean.shortName">
+  </propertySection>
+    </propertySections>
+</extension>
+
+<extension
+    point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections contributorId="Entitydiag.PropertyContributor">
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeNameSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   id="Entitydiag.main.tab.LEntityAttribute.name">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeIdSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.name"
+   id="Entitydiag.main.tab.LEntityAttribute.id">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeUuidSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.id"
+   id="Entitydiag.main.tab.LEntityAttribute.uuid">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeVersionSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.uuid"
+   id="Entitydiag.main.tab.LEntityAttribute.version">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeLazySection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.version"
+   id="Entitydiag.main.tab.LEntityAttribute.lazy">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeCascadingSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.lazy"
+   id="Entitydiag.main.tab.LEntityAttribute.cascading">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeTransientSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.cascading"
+   id="Entitydiag.main.tab.LEntityAttribute.transient">
+  </propertySection>
+  <propertySection tab="Entitydiag.main.tab"
+   class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.lunifera.tools.graphical.entity.property.LEntityAttributeDerivedSection"
+   filter="org.lunifera.tools.graphical.entity.property.LEntityAttributeFilter"
+   afterSection="Entitydiag.main.tab.LEntityAttribute.transient"
+   id="Entitydiag.main.tab.LEntityAttribute.derived">
+  </propertySection>
+    </propertySections>
+</extension>
+
+     <!-- PROPERTY SECTIONS AUTOGEN END -->
+  
+  <!-- NEW DIAGRAM WIZARD AUTOGEN START -->
+     <extension
+      point="org.eclipse.ui.newWizards">
+      <category
+         name="Entitydiag"
+         id="org.eclipselabs.spray.Entitydiag">
+         </category>
+   <wizard
+         category="org.eclipselabs.spray.Entitydiag"
+         class="org.lunifera.tools.graphical.entity.internal.ExecutableExtensionFactory:org.eclipselabs.spray.runtime.graphiti.wizard.NewDiagramWizard"
+         descriptionImage="icons/Entitydiag-32.png"
+         icon="icons/Entitydiag-16.png"
+         id="org.eclipselabs.spray.Entitydiag.NewDiagramWizard"
+         name="New Entitydiag Diagram"
+         preferredPerspectives="org.eclipse.graphiti.examples.common.perspective.GFPerspective"
+         project="false">
+   </wizard>
+</extension>
+     <!-- NEW DIAGRAM WIZARD AUTOGEN END -->
+  
+</plugin>

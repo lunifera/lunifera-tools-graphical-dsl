@@ -1,0 +1,145 @@
+/*************************************************************************************
+ *
+ * Spray shapes definition
+ * 
+ * This file contains the definition of graphical figures using the Shapes Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *************************************************************************************/
+
+// Add definition of shapes here.
+shape PackageShape {
+	rectangle {
+		compartment (
+			id = typesCompartment
+			layout = fit
+			spacing=2
+			margin=2
+		)
+		style (transparency=0.5)
+		position (x=0, y=0)
+		size (width=900, height=700)
+		text {
+			style (transparency=0.0)
+			position (x=5, y=5)
+			size (width=95, height=25)
+			id = packageName
+		}
+	}
+}
+
+shape EntityShape {
+	rectangle {
+		compartment (
+			stretching (
+				horizontal=true,
+				vertical=false
+			)
+			id = attributesCompartement
+			layout = vertical
+			spacing=2
+			margin=0
+		)
+		position (x=5, y=35)
+		size (width=200, height=250)
+	}
+	text {
+		align (horizontal=left, vertical=top)
+		style (transparency=0.0 font-bold=yes)
+		position (x=5, y=5)
+		size (width=45, height=25)
+		id = className
+	}
+}
+
+shape BeanShape {
+	rectangle {
+		compartment (
+			stretching (
+				horizontal=true,
+				vertical=false
+			)
+			id = attributesCompartement
+			layout = vertical
+			spacing=2
+			margin=0
+		)
+		position (x=5, y=5)
+		size (width=200, height=250)
+	}
+	text {
+		style (transparency=0.0)
+		position (x=5, y=5)
+		size (width=45, height=25)
+		id = beanName
+	}
+}
+
+shape EntityAttributeShape {
+	rectangle {
+		compartment (
+			stretching (
+				horizontal=false,
+				vertical=true
+			)
+			id = typeCompartement
+			layout = horizontal
+			spacing=2
+			margin=0
+		)
+		position (x=55, y=5)
+		size (width=150, height=25)
+	}
+	text {
+		style (font-bold=no line-width=0)
+		size (width=50, height=20)
+		position (x=5, y=5)
+		id = EntityAttributeText
+	}
+}
+
+shape BeanAttributeShape {
+	rectangle {
+		compartment (
+			stretching (
+				horizontal=false,
+				vertical=true
+			)
+			id = typeCompartement
+			layout = horizontal
+			spacing=2
+			margin=0
+		)
+		position (x=5, y=5)
+		size (width=150, height=25)
+	}
+	text {
+		style (font-bold=no line-width=0)
+		size (width=50, height=20)
+		position (x=5, y=5)
+		id = BeanAttributeText
+	}
+}
+
+connection ArrowConnection {
+	connection-type manhatten
+	placing {
+		position (offset=1.0)
+		polygon {
+			point (x=-10, y=-5)
+			point (x=0, y=0)
+			point (x=-10, y=5)
+			style (background-color=black line-color=black)
+		}
+	}
+}
+
+connection CPackageTypeConnection {
+	connection-type freeform
+	placing {
+		position (offset=0.5, radius=10, angle=90)
+		text {
+			size (width=60, height=20)
+			id = CPackageTypeConnectionText
+		}
+	}
+}

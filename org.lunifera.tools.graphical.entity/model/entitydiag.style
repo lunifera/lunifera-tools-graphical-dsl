@@ -1,0 +1,22 @@
+/*************************************************************************************
+ *
+ * Spray styles definition
+ * 
+ * This file contains the definition of style classes using the Styles Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *************************************************************************************/
+
+// Add definition of styles here.
+style EntitydiagDefaultStyle {
+	description = "The default style of the entitydiag diagram type."
+	transparency = 0.0
+	background-color = RGB(255, 217, 15)
+//	line-style = solid
+//	line-width = 2
+//	line-color = black
+	font-color = black
+	font-name = "Tahoma"
+	font-size = 12
+	font-bold = yes
+}
+ 
